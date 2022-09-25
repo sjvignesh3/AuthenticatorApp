@@ -73,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(LoginActivity.this, "Error "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            progressbar.setVisibility(View.GONE);
                         }
                     }
                 });
@@ -125,7 +126,6 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-
                 passResetDialog.create().show();
             }
         });
